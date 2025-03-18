@@ -13,5 +13,9 @@ function agregarAmigos(){
         alert(`${nombreAmigo} ya está en la lista`);
         return; 
     }
+
+    amigos.push(nombreAmigo); // Añadimos el nombre a la lista Amigos.
+
+    listarAmigo.value = ""; // Limpia el campo de texto a una cadena vacía.
 }
 
