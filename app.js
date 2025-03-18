@@ -31,8 +31,22 @@ function actualizarLista(){
 
     for(let i = 0; i < amigos.length; i++){ // Recorre la lista Amigos
         let li = document.createElement("li"); // Crea elemento li para la lista
-        li.textContent = amigos[i]; 
-        listaAmigos.appendChild(li);
+        li.textContent = amigos[i]; // Asigna el nombre a li
+        listaAmigos.appendChild(li); // Agrega el elemnto li en el DOM
     }
+}
+
+//agregarAmigos();
+
+function sortearAmigoAmiga(){
+    if(amigos.length === 0){ // Condición para verificar que haya al menos un nombre en la lista.
+        alert("No hay nombres en la lista")
+        return;
+    }
+    let nombreSorteado = Math.floor(Math.random() * amigos.length); // Número random entre 0 y final longitud de la lista
+    let amigoSecreto = amigos[nombreSorteado]; // Almacena el nombre sorteado.
+
+    let resultado = document.getElementById("resultado"); 
+    resultado.innerHTML = `Amigo secreto ${amigoSecreto}`; // Muestra el amigo secreto sorteado.
 }
 
