@@ -2,7 +2,7 @@
 let amigos = [];
 
 // Se crea función para agregar amigos a la lista.
-function agregarAmigos(){
+function agregarAmigo(){
     let lista = document.getElementById("amigo");
     let nombreAmigo = lista.value.trim();
 
@@ -38,7 +38,7 @@ function actualizarLista(){
 
 //agregarAmigos();
 
-function sortearAmigoAmiga(){
+function sortearAmigo(){
     if(amigos.length === 0){ // Condición para verificar que haya al menos un nombre en la lista.
         alert("No hay nombres en la lista")
         return;
