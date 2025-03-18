@@ -3,5 +3,15 @@ let amigos = [];
 function agregarAmigos(){
     let listarAmigo = document.getElementById("amigo");
     let nombreAmigo = listarAmigo.ariaValueMax.trim();
+
+    if(nombre === ""){ // Condición para asegurarse de que el campo no esté vacío
+        alert("Por favor, inserte un nombre");
+        return;
+    }
+
+    if(amigos.includes(nombreAmigo)){ // Condición para que el nombre no se repita en la lista
+        alert(`${nombreAmigo} ya está en la lista`);
+        return; 
+    }
 }
 
